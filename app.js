@@ -35,41 +35,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// window.onscroll = () => {
-//     toggleTopButton();
-//   }
-//   function scrollToTop(){
-//     window.scrollTo({top: 0, behavior: 'smooth'});
-//   }
-
-//   function toggleTopButton() {
-//     if (document.body.scrollTop > 20 ||
-//         document.documentElement.scrollTop > 20) {
-//       document.getElementById('back-to-up').classList.remove('d-none');
-//     } else {
-//       document.getElementById('back-to-up').classList.add('d-none');
-//     }
-//   }
-
-// function incrementUserCount() {
-//   setTimeout(() => {
-//     const userCountElement = document.getElementById('userCount');
-//     let userCount = parseInt(userCountElement.innerText, 10);
-//     userCount++;
-//     userCountElement.innerText = userCount;
-//   }, 2000);
-// }
-
-function incrementUserCount() {
-  const KEY = "user_count";
-  if (localStorage.getItem(KEY)) {
-    let n = Number(localStorage.getItem(KEY));
-    n++;
-    localStorage.setItem(KEY, n);
-  } else {
-    localStorage.setItem(KEY, "1");
+// window scroll button
+window.onscroll = () => {
+    toggleTopButton();
   }
-  const userCountElement = document.getElementById("userCount");
-  userCountElement.innerText = localStorage.getItem(KEY);
-}
-window.addEventListener("load", incrementUserCount);
+  function scrollToTop(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function toggleTopButton() {
+    if (document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20) {
+      document.getElementById('back-to-up').classList.remove('d-none');
+    } else {
+      document.getElementById('back-to-up').classList.add('d-none');
+    }
+  }
+
+  // function incrementUserCount() {
+  //   setTimeout(() => {
+  //     const userCountElement = document.getElementById('userCount');
+  //     let userCount = parseInt(userCountElement.innerText, 10);
+  //     userCount++;
+  //     userCountElement.innerText = userCount;
+      
+  //     // Increment the user count in localStorage
+  //     localStorage.userCount = (parseInt(localStorage.userCount) || 0) + 1;
+  //   }, 2000);
+  // }
+  
+  // function displayUserCount() {
+  //   document.getElementById("userCount").textContent = localStorage.userCount || 0;
+  // }
+  
+  // incrementUserCount();
+  // displayUserCount();
+  
