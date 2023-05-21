@@ -441,6 +441,9 @@
 .fa-star-o {
   color: goldenrod;
 }
+.fa-star-o:hover{
+  color: black;
+}
 
 .shop {
   color: #e43c5c;
