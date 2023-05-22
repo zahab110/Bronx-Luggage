@@ -164,6 +164,10 @@
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
 }
+.parent-container{
+justify-content: center;
+display: flex;
+}
 
 .badge {
   position: absolute;
