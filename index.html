@@ -145,14 +145,14 @@
         </a>
       </div>
 
-      <h4 class="text-center my-4" style="color: #c55a6e" data-aos="fade-up">
+      <h4 class="text-center my-4" style="color: #c55a6e" >
         Featured Products
       </h4>
 
-      <h6 class="text-center pb-3" style="font-weight: 100" data-aos="fade-up">
+      <h6 class="text-center pb-3" style="font-weight: 100" >
         Visit our shop to see amazing products of international brands.
       </h6>
-      <div class="text-center" data-aos="fade-up">
+      <div class="text-center" >
         <ul class="nav nav-pills mb-3 justify-content-center custom-pills" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
@@ -178,7 +178,7 @@
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="container-fluid parent-container pt-3">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card"  >
                     <div class="badge">Hot</div>
                     <div class="product-tumb">
@@ -203,7 +203,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card">
                     <div class="badge">Exclusive</div>
                     <div class="product-tumb">
@@ -228,7 +228,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card">
                     <div class="badge">Top Pick</div>
                     <div class="product-tumb">
@@ -259,7 +259,7 @@
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             <div class="container-fluid parent-container pt-3">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card">
                     <div class="badge">Hot</div>
                     <div class="product-tumb">
@@ -284,7 +284,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card">
                     <div class="badge">Exclusive</div>
                     <div class="product-tumb">
@@ -309,7 +309,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                   <div class="product-card">
                     <div class="badge">Top Pick</div>
                     <div class="product-tumb">
@@ -419,6 +419,22 @@
         </div>
       </div>
 
+      <!-- <div class="text-center mt-4 " >
+        <h4>
+          Our Brands
+        </h4>
+      </div>
+      <div class="ticker">
+        <div class="ticker__list">
+            <div class="ticker__item"><img src="images/samsonite.png" height="110px" /></div>
+            <div class="ticker__item"><img src="images/tumi.png" height="110px" /></div>
+            <div class="ticker__item"><img src="images/luisvittoun.png" height="100px" /></div>
+            <div class="ticker__item"><img src="images/chanel.png" height="100px" /></div>
+            <div class="ticker__item"><img src="images/samsung.png" height="110px" /></div>
+
+        </div>
+    </div> -->
+
       <div class="container-fluid my-5">
         <h5 class="text-center mb-4">Gallery</h5>
 
@@ -440,7 +456,7 @@
       </div>
 
       <div id="carouselExampleControls" class="carousel slide text-center container carousel-dark mt-5"
-        data-aos="fade-up" data-bs-ride="carousel">
+         data-bs-ride="carousel">
         <div class="carousel-inner">
           <h3 class="text-center pb-4" style="font-weight: 400">
             Customer Reviews
@@ -526,7 +542,7 @@
       </div>
       <!-- Carousel wrapper -->
 
-      <div class="container my-5"data-aos="fade-up" >
+      <div class="container my-5" >
         <h3 class="text-center" >Submit Your Reviews</h3>
     <div class="row" >
         <div class="col-sm-6 " >
@@ -557,9 +573,33 @@
       
     
     </div>
-    
+    <div id="ticker-container">
+      <div id="ticker-content">
+        <span id="date"></span>
+        <span id="time"></span>
+        <span id="location"></span>
+      </div>
+    </div>
+  
+    <script>
+      // Function to update the ticker content
+      function updateTicker() {
+        var date = new Date();
+        var dateString = date.toLocaleDateString();
+        var timeString = date.toLocaleTimeString();
+        var locationString = "Karachi"; 
+        
+        document.getElementById('date').innerHTML = dateString;
+        document.getElementById('time').innerHTML = timeString;
+        document.getElementById('location').innerHTML = locationString;
+      }
+  
+      updateTicker();
+  
+      setInterval(updateTicker, 1000);
+    </script>
 
-      <footer class="text-center text-white" data-aos="fade-up" style="background-color: #b0606f">
+      <footer class="text-center text-white"  style="background-color: #b0606f">
         <section class="mt-5">
           <div class="row text-center d-flex justify-content-center pt-5">
             <div class="col-md-1">
@@ -648,9 +688,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
   
-  <script>
-    AOS.init();
-  </script>
+
 </body>
 
 </html>
